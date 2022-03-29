@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Exercicio</title>
+    <script type="text/javascript">
+       
+       function Somar()
+        {
+            Validar();
+            document.getElementById('divBotoes').innerHTML = 'Soma<br>';
+            document.getElementById('divTexto').innerHTML = 'Conjunto constituído pela reunião de diversos subconjuntos; total, conjunto, somatório.<br><br>';
+            var image = document.getElementById("img");
+            image.src = "img/soma.jpg"
+            var valor1 = document.getElementById("Campo1").value;
+            var valor2 = document.getElementById("Campo2").value;
+            var resultado = parseInt(valor1) + parseInt(valor2);
+            document.getElementById("Resultado").value = resultado;
+        }
+
+        function Subtrair()
+        {
+            Validar();
+            document.getElementById('divBotoes').innerHTML = 'Subtração';
+            document.getElementById('divTexto').innerHTML = 'Subtração é uma das quatro operações matemáticas básicas na qual, para cada dois valores, um é subtraído do outro, ou seja, uma quantidade é retirada de outra, e o valor restante é o resultado dessa operação.<br><br>';
+            var image = document.getElementById("img");
+            image.src = "img/subtracao.jpg"
+            var valor1 = document.getElementById("Campo1").value;
+            var valor2 = document.getElementById("Campo2").value;
+            var resultado = parseInt(valor1) - parseInt(valor2);
+            document.getElementById("Resultado").value = resultado;
+        }
+
+        function Multiplicar()
+        {
+            Validar();
+            document.getElementById('divBotoes').innerHTML = 'Multiplicação';
+            document.getElementById('divTexto').innerHTML = 'Na matemática, a multiplicação é uma forma simples de se adicionar uma quantidade finita de números iguais. O resultado da multiplicação de dois números é chamado produto. Ao lado da adição, da divisão e da subtração, a multiplicação é uma das quatro operações fundamentais da aritmética.<br><br>';
+            var image = document.getElementById("img");
+            image.src = "img/multiplicacao.jpg"
+            var valor1 = document.getElementById("Campo1").value;
+            var valor2 = document.getElementById("Campo2").value;
+            var resultado = parseInt(valor1) * parseInt(valor2);
+            document.getElementById("Resultado").value = resultado;
+        }
+
+        function Dividir()
+        {
+            Validar();
+            document.getElementById('divBotoes').innerHTML = 'Divisão';
+            document.getElementById('divTexto').innerHTML = 'Divisão é a operação matemática inversa da multiplicação. O ato de dividir por algum elemento de um conjunto só faz sentido quando a multiplicação por aquele elemento for uma função bijetora.<br><br>';
+            var image = document.getElementById("img");
+            image.src = "img/divisao.jpg"
+            var valor1 = document.getElementById("Campo1").value;
+            var valor2 = document.getElementById("Campo2").value;
+            var resultado = parseInt(valor1) / parseInt(valor2);
+            document.getElementById("Resultado").value = resultado;
+        }
+
+        function Validar()
+        {
+            if(document.getElementById("Campo1").value == "" || document.getElementById("Campo2").value == ""){
+                alert("Valores não informados");
+                return false;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <section class="content">
+        <section class="parte nav">
+            <h6>Kailany Letícia Chuba</h6>
+        </section>
+
+        <section class="centro">
+            <section class="parte esq">
+                <br>
+                <p>Primeiro Valor: <input id="Campo1" type="text"> </p> 
+                <p>Segundo Valor: <input id="Campo2" type="text"> </p>
+                <br>
+                <input type="button" onclick='Somar()' value="+"> 
+                <input type="button" onclick='Subtrair()' value="-"> 
+                <input type="button" onclick='Multiplicar()' value="*"> 
+                <input type="button" onclick='Dividir()' value="/">
+                <br> <br>
+                <p>Resultado: <input id="Resultado" type="text"> </p>
+            </section>
+
+            <section class="parte dir">
+                <br>
+                <span class="sp1"> 
+                    <div id="divBotoes"> </div>
+                </span>
+    
+                <span class="sp2">
+                    <div id="divTexto"> </div>
+                </span>
+                <div id="divImagem"> 
+                    <img id="img" class="borda" />
+
+                </div>
+            
+            </section>
+        </section>
+
+    </section>
+</body>
+
+</html>
